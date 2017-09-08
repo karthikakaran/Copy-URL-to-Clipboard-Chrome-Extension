@@ -1,0 +1,22 @@
+function clickHandler(e) {
+   /* var element = document.createElement("Input");
+        element.setAttribute("type", "button");
+        element.setAttribute("value", "button");
+        element.setAttribute("name", "button");
+        document.getElementsByTagNameId('div');
+        div.appendChild(element);
+        document.body.appendChild(div);*/
+   // chrome.runtime.sendMessage({directive: "popup-click"}, function(response) {
+     //   this.close(); // close the popup when the background finishes processing request
+    //});
+   chrome.tabs.sendMessage(tab.id, {text: 'report_back'}, doStuffWithDom);
+}
+
+// A function to use as callback
+function doStuffWithDom(domContent) {
+    console.log('I received the following DOM content:\n' + domContent);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('activate').addEventListener('click', clickHandler);
+})

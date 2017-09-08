@@ -1,0 +1,8 @@
+<html>
+<body>
+<div id='div_tag'>
+<button id='btn'>Test</button><br>
+<a class='text' id='p1'> hi all </a>
+</div>
+</body>
+</html>
